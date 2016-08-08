@@ -1,0 +1,39 @@
+<%= render 'shared/navigation', id: "basic" %>
+<div class="col-md-6 col-md-offset-3">
+  <div class="panel panel-default" id="signup-panel">
+    <div class="panel-body">
+
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: "form form-horizontal", id: "password-reset-form" }) do |f| %>
+        <legend>Change you password</legend>
+        <%= devise_error_messages! %>
+
+        <%= f.hidden_field :reset_password_token %>
+        <br />
+
+        <div class="field form-group">
+          <%= f.label :password, "New password", class: "col-sm-2" %>  
+          <div class="col-sm-10">
+            <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+            <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+          </div>
+        </div>
+
+        <div class="field form-group">
+          <%= f.label :password_confirmation, "Confirm new password", class: "col-sm-2" %>  
+          <div class="col-sm-10">
+            <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+          </div>
+        </div>
+
+
+        <div class="actions text-center">
+          <%= f.submit "Change my password", class: "btn btn-primary" %> <br/><br/>
+          <%= render "devise/shared/links" %>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>

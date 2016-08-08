@@ -1,0 +1,29 @@
+$(document).ready(function () {
+	function readURL(input) {
+		var url = input.value;
+		var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+		if (input.files && input.files[0]&& (ext == "gif" || ext == "png" || ext == "jpeg" || ext == "jpg")) {
+		    var reader = new FileReader();
+
+		    reader.onload = function (e) {
+		        $('#user_avatar').attr('src', e.target.result);
+		    }
+
+		    reader.readAsDataURL(input.files[0]);
+		}else{
+		     $('#user_avatar').attr('src', '/assets/blank-profile.png');
+		}
+	}
+
+
+	$("#upload_avatar").change(function() { 
+		console.log('event happened');
+	    readURL(this);
+	});
+
+
+	$('#email_id').change(function() {
+		console.log("what");
+	})
+
+});

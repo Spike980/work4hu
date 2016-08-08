@@ -1,0 +1,37 @@
+<div class="jumbotron">
+	<%= render 'shared/navigation', id: "landing" %>
+
+	<h1 class="lead text-center animated shake">Work-4-Humanity</h1>
+
+	<div class="panel panel-default col-sm-4 col-sm-offset-4">
+		<div class="panel-body">
+
+		<%= render 'shared/signin-form' %>
+		
+		<br />
+		<h2 class="text-center" style="color:white">-- Or --</h2>
+		<br />
+			<button type="submit" class="col-md-offset-5 btn btn-yellow">Signup</button>
+		</div>
+	</div>
+</div>
+
+<br/>
+<div class="container-fluid" id="adjust-margin">
+	<section id="motto" class="row">
+		<div class="col-md-offset-1 col-md-3">
+			<%= image_tag("volunteer.png", alt: "volunteer keywords", id: "volunteer_keywords", class: "img img-responsive img-circle") %>
+		</div>
+		<div class="col-md-offset-2 col-md-5">
+			<p>We connect people who want to help, with people who needs help.</p>
+			<blockquote><p>“If you're not making someone else's life better, then you're wasting your time. Your life will become better by making other lives better.”	</p>		
+			<cite>― Will Smith</cite></blockquote>
+		</div>
+	</section>
+
+	<footer class="row">
+		<div class="text-center">
+			<p>This is a footer.</p>
+		</div>
+	</footer>
+</div>

@@ -6,9 +6,11 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic|Montserrat:400,700|Permanent+Marker' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
     <%= yield %>
+    <%=  debug(params) if Rails.env.development? %> 
   </body>
 </html>

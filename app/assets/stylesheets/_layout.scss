@@ -1,0 +1,83 @@
+@import "bourbon";
+@import "mixin-variable";
+
+/* miscellaneous */
+.debug_dump {
+	position: absolute;
+	width: 100%;
+	margin-top: 42%;
+	background-color: $gray-medium-light;
+	@include box_sizing;
+}
+
+
+#landing {
+	background: none !important;
+	border: 0 !important;
+/*	border-color: #524842;
+	-webkit-box-shadow: 1px 4px 2px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 4px 2px 0px rgba(0,0,0,0.75);
+	box-shadow: 1px 4px 2px 0px rgba(0,0,0,0.75);
+
+*/
+	.navbar-nav > li > a {
+		color: #fff;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 300;
+		font-size: 1.4em;
+		&:hover { 
+			color: darken(white, 15%);
+		}
+	} 
+
+	.navbar-brand {
+		font-family: 'Permanent Marker', cursive;
+		font-size: 32px;
+		margin: 0.2em;
+		@include animation(changeColor_circle 2.0s ease-in);
+		@include animation-delay(2s);
+		@include animation-fill-mode(forwards);
+	}
+
+	@include keyframes(changeColor_circle) {
+		from {
+			color: darken(red, 5%);
+			background-color: #fff;
+		}
+		to {
+			background-color: #D93240;
+			color: #fff;
+			border-radius: 1em;
+		}
+	}
+
+
+}
+
+#basic {
+	margin: 0;
+	background-color: #f95149;
+/*	border-color: #524842;
+	-webkit-box-shadow: 1px 4px 2px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 4px 2px 0px rgba(0,0,0,0.75);
+	box-shadow: 1px 4px 2px 0px rgba(0,0,0,0.75);
+
+*/
+	.navbar-nav > li > a {
+		color: #fff;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 400;
+		font-size: 1.4em;
+	} 
+
+	.navbar-brand {
+		color: #fff;
+		color: #f95149;
+		background-color: #fff;
+		border-radius: 1em;
+		font-family: 'Permanent Marker', cursive;
+		font-size: 32px;
+		margin: 0.2em;
+	}
+
+}
